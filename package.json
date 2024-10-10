@@ -16,8 +16,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node dist/index.js",
     "start:dev": "nodemon --watch \"src/\" --exec  \"ts-node src/index.ts\" -e ts ",
-    "lint":"eslint"
+    "lint": "eslint",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +28,8 @@
   "dependencies": {
     "@types/node": "^22.7.5",
     "typescript": "^5.6.3"
+  },
+  "lint-staged": {
+    "*.ts": ["yarn eslint 'src/**' --fix","yarn preetier 'src/**'"]
   }
 }
