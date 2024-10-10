@@ -31,7 +31,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": ["yarn eslint 'src/**' --fix","yarn prettier 'src/**'", "git add"]
+    "*.ts": ["yarn eslint --fix","yarn prettier"]
   },
   "keywords": [],
   "author": "",
