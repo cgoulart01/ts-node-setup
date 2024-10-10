@@ -25,18 +25,17 @@
     "lint": "eslint",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {  
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": ["yarn eslint 'src/**' --fix","yarn prettier 'src/**'"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "packageManager": "yarn@4.5.0",
-     "husky": {
-       "hooks": {  
-         "pre-commit": "lint-staged"
-       }
-     },
-     "lint-staged": {
-       "*.ts": ["yarn eslint 'src/**' --fix","yarn prettier 'src/**'"]
-     }
-    
+  "packageManager": "yarn@4.5.0"   
 }
