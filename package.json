@@ -36,7 +36,7 @@
        }
      },
      "lint-staged": {
-       "*.js": ["eslint --fix", "git add"]
+       "*.ts": ["yarn eslint 'src/**' --fix","yarn prettier 'src/**'"]
      }
     
 }
