@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import jest from "eslint-plugin-jest";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+
 export default [
   { ignores: ["dist/"] },
   { files: ["**/*.{js,mjs,cjs,ts}"] },
@@ -18,4 +19,14 @@ export default [
     },
   },
   eslintPluginPrettierRecommended,
+  {
+    rules: {
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto", // Use "lf", "crlf", ou "auto" conforme necessário
+        },
+      ],
+    },
+  },
 ];

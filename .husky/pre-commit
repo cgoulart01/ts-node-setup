@@ -1,2 +1,19 @@
 exec < /dev/tty
+
+current_branch=$(git branch --show-current)
+
+# Verifica se está na branch "main" ou "master"
+if [ "$current_branch" = "main" ] || [ "$current_branch" = "master" ]; then
+  echo "Você está na branch '$current_branch'. Deseja continuar com o commit? (y/N)"
+  read -r answer
+  # Se a resposta for 'y' ou 'Y', continua com o commit, caso contrário cancela
+  if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
+    echo "Continuando com o commit..."
+    yarn lint-staged # Substitua pelo comando que você quer executar
+  else
+    echo "Commit cancelado."
+    exit 1
+  fi
+fi
+
 yarn lint-staged
