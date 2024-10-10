@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.11.0",
     "nodemon": "^3.1.7",
-    "ts-node": "^10.9.2"
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript-eslint": "^8.8.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon --watch \"src/\" --exec  \"ts-node src/index.ts\" -e ts "
+    "start:dev": "nodemon --watch \"src/\" --exec  \"ts-node src/index.ts\" -e ts ",
+    "lint":"eslint"
   },
   "keywords": [],
   "author": "",
