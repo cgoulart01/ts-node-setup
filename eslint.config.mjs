@@ -7,12 +7,12 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 export default [
   { ignores: ["dist/"] },
   { files: ["**/*.{js,mjs,cjs,ts}"] },
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: ["tests/**/*.(js,ts,jsx,tsx)"],
-    ...jest.configs["flat/recommended"],
+    ...jest.configs["flat/all"],
     rules: {
       ...jest.configs["flat/recommended"].rules,
       "jest/prefer-expect-assertions": "off",

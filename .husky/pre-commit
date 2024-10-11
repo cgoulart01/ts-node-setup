@@ -10,10 +10,13 @@ if [ "$current_branch" = "main" ] || [ "$current_branch" = "master" ]; then
   if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     echo "Continuando com o commit..."
     yarn lint-staged # Substitua pelo comando que você quer executar
+    exit  
   else
     echo "Commit cancelado."
     exit 1
   fi
+else
+yarn lint-staged
+exit  
 fi
 
-yarn lint-staged
