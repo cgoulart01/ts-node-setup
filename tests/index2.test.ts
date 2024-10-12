@@ -1,3 +1,3 @@
-it("should be sum 2", () => {
-  expect(5 + 6).not.toBe(6);
+it("should not be six", () => {
+  expect(6 + 4).not.toBe(6);
 });
