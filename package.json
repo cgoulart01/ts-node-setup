@@ -30,7 +30,7 @@
     "build": "tsc-alias && tsc",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watch",
-    "test:staged": "yarn test --findRelatedTests",
+    "test:staged": "yarn test --findRelatedTests --bail",
     "test:push": "yarn test --coverage",
     "start": "node dist/index.js",
     "start:dev": "nodemon --watch 'src/' --exec  'ts-node -r tsconfig-paths/register src/index.ts' -e ts ",
